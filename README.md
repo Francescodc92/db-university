@@ -2,7 +2,7 @@
 
 ## Modellizzare la struttura di un database per memorizzare tutti i dati riguardanti una università:
 
-- DESCRIZIONE:
+- DESCRIZIONE es 29/08/2023:
   - sono presenti diversi Dipartimenti (es.: Lettere e Filosofia, Matematica, Ingegneria ecc.)
   - ogni Dipartimento offre più Corsi di Laurea (es.: Civiltà e Letterature Classiche, Informatica, Ingegneria Elettronica ecc..)
   - ogni Corso di Laurea prevede diversi Corsi (es.: Letteratura Latina, Sistemi Operativi 1, Analisi Matematica 2 ecc.)
@@ -14,6 +14,10 @@
 
 - CONSIGLI:
   - Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi di stabilirne le relazioni. Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
+
+- DESCRIZIONE es 30/08/2023:
+  - Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo schema allegato, eseguite le query del file allegato.
+  - Dopo aver testato le vostre query con phpMyAdmin, riportatele in un file txt e caricatelo nella vostra repo.
 
 ## Tecnologie
 
