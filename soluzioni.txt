@@ -1,0 +1,76 @@
+1. Selezionare tutti gli studenti nati nel 1990 (160)
+
+soluzione
+	mysql> SELECT *
+   	 -> FROM `students`
+  	 -> WHERE YEAR(`date_of_birth`) = 1990
+   	 -> ;
+
+
+
+2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
+
+ soluzione 
+	SELECT * 
+	FROM `courses` 
+	WHERE `cfu` > 10;
+
+
+3. Selezionare tutti gli studenti che hanno più di 30 anni
+
+soluzione 1 3597 risultati soluzione CHATGPT 
+  	SELECT *
+	FROM students
+	WHERE DATEDIFF(CURRENT_DATE, date_of_birth) > 30 * 365.25;
+
+soluzione 2 3501 risultati
+	SELECT * 
+	FROM `students` 
+	WHERE YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) > 30
+
+
+4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
+laurea (286)
+
+SOLUZIONE 1
+	SELECT * 
+	FROM `courses` 	
+	WHERE `period` = 'I SEMESTRE' 
+	AND `year` = 1
+
+SOLUZIONE 2 
+	SELECT * 
+	FROM `courses` 
+	WHERE `period` LIKE 'I %' 
+	AND `year` = 1
+
+5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
+20/06/2020 (21)
+
+SOLUZIONE 
+	SELECT * 
+	FROM `exams` 
+	WHERE `date` = "2020-06-20" 
+	AND `hour` > "14:00"
+
+6. Selezionare tutti i corsi di laurea magistrale (38)
+
+soluzione
+	SELECT * 
+	FROM `degrees` 
+	WHERE `level` = "magistrale"
+
+7. Da quanti dipartimenti è composta l'università? (12)
+
+soluzione
+	SELECT COUNT(`id`) AS `department_number` 
+	FROM `departments`
+
+8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+SOLUZIONE 
+
+	SELECT COUNT(`id`) AS `teachers_with_phone` 
+	FROM `teachers` 
+	WHERE `phone` IS NOT NULL
+
