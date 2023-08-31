@@ -1,0 +1,42 @@
+
+query group
+
+1. Contare quanti iscritti ci sono stati ogni anno
+
+	soluzione (1083 risultati)
+	SELECT COUNT(`id`) AS 'enrolment_on_year',
+	   YEAR(`enrolment_date`) AS 'year'
+	FROM `students` 
+	GROUP BY enrolment_date
+
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+	soluzione
+
+	SELECT COUNT(`id`) AS 'number_teacher_office_on_same_adress',
+		`teachers`.`office_address` AS 'office_address'
+	FROM `teachers`
+	GROUP BY `teachers`.`office_address`
+
+3. Calcolare la media dei voti di ogni appello d'esame
+
+	soluzione
+
+	SELECT AVG(`exam_student`.`vote`) AS 'avg_vote'
+	FROM `exam_student`
+	INNER JOIN `exams`
+	ON `exam_student`.`student_id` = `exams`.`id`
+	GROUP BY `exam_student`.`exam_id`
+
+
+4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+	
+	soluzione 
+
+
+	SELECT COUNT(`degrees`.`id`) AS 'degree_number_for_department', 	`departments`.`name`AS 'department_name'
+	FROM `degrees` 
+	INNER JOIN `departments`
+	ON `degrees`.`department_id` = `departments`.`id`
+	GROUP BY `departments`.`id`

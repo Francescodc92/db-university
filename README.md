@@ -19,6 +19,10 @@
   - Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo schema allegato, eseguite le query del file allegato.
   - Dopo aver testato le vostre query con phpMyAdmin, riportatele in un file txt e caricatelo nella vostra repo.
 
+- DESCRIZIONE es 31/08/2023:
+  - Utilizzando lo stesso database di ieri, eseguite le query in allegato.
+  - Caricate un secondo file nella stessa repo di ieri (db-university) con le query di oggi.
+
 ## Tecnologie
 
 - https://www.diagrams.net
