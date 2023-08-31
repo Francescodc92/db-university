@@ -1,3 +1,5 @@
+risoluzione esercizi
+
 1. Selezionare tutti gli studenti nati nel 1990 (160)
 
 soluzione
@@ -72,5 +74,5 @@ SOLUZIONE
 
 	SELECT COUNT(`id`) AS `teachers_with_phone` 
 	FROM `teachers` 
-	WHERE `phone` IS NOT NULL
+	WHERE `phone` IS NULL
 
