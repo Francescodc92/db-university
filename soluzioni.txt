@@ -72,7 +72,7 @@ soluzione
 
 SOLUZIONE 
 
-	SELECT COUNT(`id`) AS `teachers_with_phone` 
+	SELECT COUNT(`id`) AS `teachers_no_phone` 
 	FROM `teachers` 
 	WHERE `phone` IS NULL
 
